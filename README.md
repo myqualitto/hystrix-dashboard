@@ -1,1 +1,1 @@
-# techhmr-hystrixdashboard
+# Hystrix - Dashboard
