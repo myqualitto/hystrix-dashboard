@@ -1,0 +1,40 @@
+server:
+   port: 8888
+spring:
+   application:
+      name: hystrix-dashboard
+   profiles:
+      active: local
+hystrix:
+   dashboard: null
+   proxy-stream-allow-list: '*'
+---
+spring:
+   profiles: local
+   cloud:
+      config:
+         uri: http://localhost:7777
+---
+spring:
+   profiles: dev
+   cloud:
+      config:
+         uri: http://localhost:7777
+---
+spring:
+   profiles: test
+   cloud:
+      config:
+         uri: http://localhost:7777
+---
+spring:
+   profiles: stage
+   cloud:
+      config:
+         uri: http://localhost:7777
+---
+spring:
+   profiles: prod
+   cloud:
+      config:
+         uri: http://localhost:7777

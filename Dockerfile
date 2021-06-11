@@ -1,4 +1,4 @@
-FROM openjdk:8
-EXPOSE 9095
-ADD target/techhmr-hystrixdashboard.jar techhmr-hystrixdashboard.jar
-ENTRYPOINT ["java","-jar","/techhmr-hystrixdashboard.jar"]
+FROM openjdk:8-jdk-alpine
+EXPOSE 8888
+COPY target/*.jar hystrix-dashboard.jar
+ENTRYPOINT ["java","-jar","/hystrix-dashboard.jar"]
