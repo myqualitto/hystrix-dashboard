@@ -27,10 +27,7 @@ metadata:
    labels:
       app: hystrix-dashboard-k8srv
 spec:
-   type: NodePort
    ports:
-   -  nodePort: 30002
-      port: 8888
-      targetPort: 8888
+   -  port: 8888
    selector:
       app: hystrix-dashboard
